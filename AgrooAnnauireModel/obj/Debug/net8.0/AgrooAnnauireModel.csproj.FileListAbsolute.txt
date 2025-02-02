@@ -1,0 +1,14 @@
+C:\Users\natac\source\repos\AgrooAnnuaire\AgrooAnnauireModel\bin\Debug\net8.0\AgrooAnnauireModel.deps.json
+C:\Users\natac\source\repos\AgrooAnnuaire\AgrooAnnauireModel\bin\Debug\net8.0\AgrooAnnauireModel.runtimeconfig.json
+C:\Users\natac\source\repos\AgrooAnnuaire\AgrooAnnauireModel\bin\Debug\net8.0\AgrooAnnauireModel.dll
+C:\Users\natac\source\repos\AgrooAnnuaire\AgrooAnnauireModel\bin\Debug\net8.0\AgrooAnnauireModel.pdb
+C:\Users\natac\source\repos\AgrooAnnuaire\AgrooAnnauireModel\obj\Debug\net8.0\AgrooAnnauireModel.csproj.AssemblyReference.cache
+C:\Users\natac\source\repos\AgrooAnnuaire\AgrooAnnauireModel\obj\Debug\net8.0\AgrooAnnauireModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\natac\source\repos\AgrooAnnuaire\AgrooAnnauireModel\obj\Debug\net8.0\AgrooAnnauireModel.AssemblyInfoInputs.cache
+C:\Users\natac\source\repos\AgrooAnnuaire\AgrooAnnauireModel\obj\Debug\net8.0\AgrooAnnauireModel.AssemblyInfo.cs
+C:\Users\natac\source\repos\AgrooAnnuaire\AgrooAnnauireModel\obj\Debug\net8.0\AgrooAnnauireModel.csproj.CoreCompileInputs.cache
+C:\Users\natac\source\repos\AgrooAnnuaire\AgrooAnnauireModel\obj\Debug\net8.0\AgrooAnnauireModel.dll
+C:\Users\natac\source\repos\AgrooAnnuaire\AgrooAnnauireModel\obj\Debug\net8.0\refint\AgrooAnnauireModel.dll
+C:\Users\natac\source\repos\AgrooAnnuaire\AgrooAnnauireModel\obj\Debug\net8.0\AgrooAnnauireModel.pdb
+C:\Users\natac\source\repos\AgrooAnnuaire\AgrooAnnauireModel\obj\Debug\net8.0\AgrooAnnauireModel.genruntimeconfig.cache
+C:\Users\natac\source\repos\AgrooAnnuaire\AgrooAnnauireModel\obj\Debug\net8.0\ref\AgrooAnnauireModel.dll
