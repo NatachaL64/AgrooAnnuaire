@@ -1,0 +1,91 @@
+﻿<UserControl x:Class="AgrooAnnuaireWPF.Views.Salaries"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:local="clr-namespace:AgrooAnnuaireWPF.Views"
+         xmlns:viewModels="clr-namespace:AgrooAnnuaireWPF.ViewModels"
+         >
+    <UserControl.DataContext>
+        <viewModels:SitesViewModel />
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="Titre" Grid.Row="0" Text="{Binding Titre}" Margin="0" FontWeight="Bold" />
+
+        <Grid Grid.Row="1">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Margin=" 0 5 10 10">
+                <Label Content="Nom du Salarié" />
+            <TextBox  Text="{Binding Nom}" /> 
+            </StackPanel>
+
+
+            <StackPanel Grid.Column="1" Orientation="Vertical" Margin=" 0 5 10 10">
+                <TextBlock Text="Site" Margin="0,0,0,5" />
+                <ComboBox ItemsSource="{Binding ListeSites}" DisplayMemberPath="Nom" 
+                SelectedItem="{Binding Site}" x:Name="ComboSite"
+                 SelectedValuePath="Id" />
+            </StackPanel>
+
+            <StackPanel Grid.Column="2" Orientation="Vertical" Margin=" 0 5 10 10">
+                <TextBlock Text="Service" Margin="0,0,0,5" />
+                <ComboBox ItemsSource="{Binding ListeServices}" DisplayMemberPath="Nom" 
+                 SelectedItem="{Binding Service}" x:Name="ComboService"
+                 SelectedValuePath="Id" />
+            </StackPanel>
+
+            <StackPanel Grid.Column="3" Margin="0,5,107,0" Grid.ColumnSpan="2" Height="54" VerticalAlignment="Top" >
+                <TextBlock Text="" Margin="0,0,0,5" />
+                <Button Content="Rechercher" Width="100" Height="20"/>
+            </StackPanel>
+
+        </Grid>
+
+        <Grid Grid.Row="2" Margin="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <DataGrid Name="dtg"
+                      ItemsSource="{Binding ListeSalaries}"
+                      AutoGenerateColumns="False"
+                      CanUserAddRows="False"
+                      IsSynchronizedWithCurrentItem="True"
+                      ColumnWidth="Auto"
+                      SelectionChanged="DataGrid_SelectionChanged">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Nom" Binding="{Binding Nom}" IsReadOnly="True" Width="Auto" />
+                    <DataGridTextColumn Header="Prénom" Binding="{Binding Prenom}" IsReadOnly="True" Width="Auto" />
+                    <DataGridTextColumn Header="Email" Binding="{Binding Email}" IsReadOnly="True" Width="Auto" />
+                    <DataGridTextColumn Header="Téléphone Fixe" Binding="{Binding TelephoneFixe}" IsReadOnly="True" Width="Auto" />
+                    <DataGridTextColumn Header="Téléphone Portable" Binding="{Binding TelephonePortable}" IsReadOnly="True" Width="Auto" />
+                    <DataGridTextColumn Header="Site" Binding="{Binding SiteNom}" IsReadOnly="True" Width="Auto" />
+                    <DataGridTextColumn Header="Service" Binding="{Binding ServiceNom}" IsReadOnly="True" Width="Auto" />
+                    <DataGridTextColumn Header="IdSite" Binding="{Binding IdSite}" Visibility="Collapsed" />
+                    <DataGridTextColumn Header="IdService" Binding="{Binding IdService}" Visibility="Collapsed" />
+                    <DataGridTextColumn Header="ID" Binding="{Binding Id}" Visibility="Collapsed" />
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10">
+                <Button x:Name="DetailButton" Content="Detail" Width="100" Margin="5" Click="DetailButton_Click" IsEnabled="False"/>
+                <Button Content="Créer" Width="100" Margin="5" Click="CreerButton_Click" />
+                <Button x:Name="ModifierButton" Content="Modifier" Width="100" Margin="5" Click="ModifierButton_Click" IsEnabled="False" />
+                <Button x:Name="SupprimerButton" Content="Supprimer" Width="100" Margin="5" Click="SupprimerButton_Click" IsEnabled="False" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="AgrooAnnuaireWPF.Views.Accueil"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:viewModels="clr-namespace:AgrooAnnuaireWPF.ViewModels"
+            
+             Height="200" Width="400">
+
+    <UserControl.DataContext>
+        <viewModels:AccueilViewModel />
+    </UserControl.DataContext>
+
+
+    <Grid Background="White" Margin="5">
+        <!-- Définir les lignes et colonnes -->
+        <Grid.RowDefinitions>
+            <!-- Ligne pour le texte de bienvenue -->
+            <RowDefinition Height="Auto" />
+            <!-- Ligne pour les rectangles -->
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Texte de bienvenue -->
+        <TextBlock Text="{Binding BienvenueMessage}" 
+                   FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" 
+                   Grid.Row="0" Margin="5"/>
+
+       
+    </Grid>
+</UserControl>

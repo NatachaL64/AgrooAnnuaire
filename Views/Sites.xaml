@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="AgrooAnnuaireWPF.Views.Sites"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:AgrooAnnuaireWPF.Views"
+             xmlns:viewModels="clr-namespace:AgrooAnnuaireWPF.ViewModels"
+             >
+    <UserControl.DataContext>
+        <viewModels:SitesViewModel />
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="Titre" Grid.Row="0" Text="{Binding Titre}" Margin="10" FontWeight="Bold" FontSize="18"  />
+
+        <Grid Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <DataGrid Name="dtg"
+                      ItemsSource="{Binding ListeSite}"
+                      AutoGenerateColumns="False"
+                      CanUserAddRows="False"
+                      IsSynchronizedWithCurrentItem="True"
+                      ColumnWidth="Auto"
+                      SelectionChanged="DataGrid_SelectionChanged" Margin="10">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Nom" Binding="{Binding NomVille}" IsReadOnly="True" Width="Auto" />
+
+                    <DataGridTextColumn Header="ID" Binding="{Binding Id}" Visibility="Collapsed" />
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10">
+                <Button Content="Créer" Width="100" Margin="5" Click="CreerButton_Click" />
+                <Button x:Name="ModifierButton" Content="Modifier" Width="100" Margin="5" Click="ModifierButton_Click" IsEnabled="False" />
+                <Button x:Name="SupprimerButton" Content="Supprimer" Width="100" Margin="5" Click="SupprimerButton_Click" IsEnabled="False" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>
