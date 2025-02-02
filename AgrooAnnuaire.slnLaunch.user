@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "WPF API ",
+    "Projects": [
+      {
+        "Path": "AgrooAnnuaireAPI\\AgrooAnnuaireAPI.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "AgrooAnnuaireWPF\\AgrooAnnuaireWPF.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
