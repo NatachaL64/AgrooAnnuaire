@@ -1,0 +1,6 @@
+@AgrooAnnuaireAPI_HostAddress = http://localhost:7042
+
+GET {{AgrooAnnuaireAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
